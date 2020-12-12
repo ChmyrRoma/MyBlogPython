@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">   
+    <title>DjangoBlog</title>
+</head>
+<body>
+<div class="page">
+<div class="container">
+    <nav>
+        <a href="/">DjangoBlog</a>
+    </nav>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+</div>
+    <footer class="footer">
+        <h2 class="footer_text" align="center">Site created by Roma Chmyr</h2>
+        <a href="{% url 'post_new' %}" class="top-menu">secret form</a>
+    </footer>
+</div>
+</body>
+</html>
